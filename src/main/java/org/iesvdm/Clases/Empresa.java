@@ -21,17 +21,17 @@ import java.util.Set;
 
 public class Empresa {
     //ATRIBUTOS
-    private Set<Empleado> empleadoList = new HashSet<>();
+    private Set<org.iesvdm.Clases.Empleado> empleadoList = new HashSet<>();
 
     //CONSTRUCTOR
     public Empresa(){
     }
 
     //GETTERS AND SETTERS
-    public Set<Empleado> getEmpleadoList() {
+    public Set<org.iesvdm.Clases.Empleado> getEmpleadoList() {
         return empleadoList;
     }
-    public void setEmpleadoList(Set<Empleado> empleadoList) {
+    public void setEmpleadoList(Set<org.iesvdm.Clases.Empleado> empleadoList) {
         this.empleadoList = empleadoList;
     }
 
@@ -48,8 +48,7 @@ public class Empresa {
                 String nombre = ((Empleado) annotation).nombre();
                 String apellidos = ((Empleado) annotation).apellidos();
 
-                Empleado empleado = new Empleado(nombre, apellidos);
-                empleadoList.add(empleado);
+                empresa.getEmpleadoList().add(new org.iesvdm.Clases.Empleado(nombre, apellidos));
 
             }
         }
