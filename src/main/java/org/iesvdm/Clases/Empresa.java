@@ -43,8 +43,12 @@ public class Empresa {
         Annotation[] anotaciones = empresa.getClass().getAnnotations();
 
         for (Annotation annotation : anotaciones){
-            if (annotation instanceof Empleado){
+            if (annotation instanceof Empleados){
                 System.out.println(annotation);
+
+                Empleado[] empleadosAnotArr = ((Empleados) annotation).value();
+                for ()
+
                 String nombre = ((Empleado) annotation).nombre();
                 String apellidos = ((Empleado) annotation).apellidos();
 
