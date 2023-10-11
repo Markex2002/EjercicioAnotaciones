@@ -1,5 +1,6 @@
 package org.iesvdm;
 
+import org.iesvdm.Clases.Empleado;
 import org.iesvdm.Clases.Empresa;
 
 public class Main {
@@ -8,6 +9,8 @@ public class Main {
         Empresa empresa = new Empresa();
         Empresa.cargadorContexto(empresa);
 
-
+        for (Empleado empleado : empresa.getEmpleadoList()){
+            System.out.println(empleado.toString());
+        }
     }
 }

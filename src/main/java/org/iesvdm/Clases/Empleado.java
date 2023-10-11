@@ -57,6 +57,15 @@ public class Empleado {
     public boolean equals(Object obj) {
         Empleado e1 = (Empleado) obj;
 
+        //Si el Dni coincide, se trata de la misma persona
         return this.dni.equalsIgnoreCase(e1.getDni());
+    }
+
+    @Override
+    public String toString() {
+        String resultado = "";
+        resultado += "nombre: " + nombre + ", apellidos: " + apellidos + ", Posicion: " + getClass().toString();
+
+        return resultado;
     }
 }
